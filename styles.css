@@ -1,0 +1,256 @@
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  header {
+    background-color: #3880eb;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+  }
+  
+  .logo_titulo {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .logo_titulo img{
+    width: 100px;
+  }
+  
+  .logo_titulo h1 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+  
+  .logo_titulo p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10px;
+  }
+  
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .social-icons a i {
+    font-size: 20px;
+  }
+  
+  /* Colores específicos de cada red social */
+  .social-icons a[href*="facebook.com"] {
+    background-color: #3b5998;
+  }
+  
+  .social-icons a[href*="twitter.com"] {
+    background-color: #1da1f2;
+  }
+  
+  .social-icons a[href*="instagram.com"] {
+    background-color: #e4405f;
+  }
+  
+  .social-icons a[href*="linkedin.com"] {
+    background-color: #0077b5;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  /* Navegación */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #3880eb;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    margin: 0; /* Eliminar el margen para evitar sombra */
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ffa500;
+  }
+  
+  /* Menu hamburguesa */
+  .menu-hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    gap: 6px;
+  }
+  
+  .menu-hamburguesa div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  /* Main */
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Botón */
+  .btn {
+    background-color: #ffa500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #ff8000;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #3880eb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  footer p {
+    margin: 10px 0;
+  }
+  
+  footer .social-icons {
+    margin: 10px 0;
+  }
+  
+  /* Responsivo para tabletas y móviles */
+  @media (max-width: 1024px) {
+    .logo_titulo h1 {
+      font-size: 1.6rem;
+    }
+  
+    .logo_titulo p {
+      font-size: 0.9rem;
+    }
+    .logo_titulo img {
+        width: 85px;
+      }
+  
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+    }
+  
+    nav ul {
+      gap: 10px;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo_titulo h1 {
+      font-size: 1.4rem;
+    }
+  
+    .logo_titulo p {
+      font-size: 0.8rem;
+    }
+    .logo_titulo img {
+        width: 75px;
+      }
+    .menu-hamburguesa {
+      display: flex;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #3880eb;
+      position: absolute;
+      top: 100px; /* Empujar debajo del logo */
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    main {
+      padding: 15px;
+    }
+  
+    .logo_titulo.shift { /* Clase para empujar el logo */
+      transform: translateY(60px); /* Ajusta el valor según sea necesario */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo_titulo img {
+      width: 80px;
+    }
+  
+    .logo_titulo h1 {
+      font-size: 1.2rem;
+    }
+    .logo_titulo img {
+        width: 60px;
+      }
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .btn {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
